@@ -7,6 +7,7 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import Transformation90Days from '@/components/Transformation90Days';
 import FeatureImageCards from '@/components/FeatureImageCards';
 import ServicesCarousel from '@/components/ServicesCarousel';
+import FourStepsProcess from '@/components/FourStepsProcess';
 import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
 
@@ -19,28 +20,31 @@ export default function Home() {
       {/* 2. Main Navigation Header (Nutrition By Durdana) */}
       <Header />
 
-      {/* 3. Hero Banner with Habit Change Headline & Floating Card */}
+      {/* 3. Hero Banner (Auto-slide 3s) */}
       <HeroBanner />
 
-      {/* 4. About Us Section (Ayurveda & Medical Nutrition by Durdana) */}
+      {/* 4. About Us Section (Nutrition By Durdana) */}
       <AboutUs />
 
       {/* 5. Why Choose Us / Why People Need a Health Adviser */}
       <WhyChooseUs />
 
-      {/* 6. 90 Days Transformation Section (Personalized Nutrition & Exercise Plans) */}
+      {/* 6. 90 Days Transformation Section */}
       <Transformation90Days />
 
-      {/* 7. Feature Image Cards (Healthy Meals Tips, Recipes Idea) */}
+      {/* 7. Feature Image Cards */}
       <FeatureImageCards />
 
-      {/* 8. Services Carousel with Interactive Hover Color States */}
+      {/* 8. Services Carousel */}
       <ServicesCarousel />
 
-      {/* 9. FAQ Accordion Section */}
+      {/* 9. Solution in 4 Easy Steps */}
+      <FourStepsProcess />
+
+      {/* 10. FAQ Accordion Section */}
       <FAQSection />
 
-      {/* 10. Footer with Brand Info, Quick Links & Contact */}
+      {/* 11. Footer with Map, Location & Developer Credits */}
       <Footer />
     </main>
   );
