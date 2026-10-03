@@ -1,25 +1,29 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Phone, Mail, Clock, Calendar, ChevronDown, ChevronUp, ArrowUp } from 'lucide-react';
 import AppointmentModal from './AppointmentModal';
+import brandLogo from '../../logo (2).jpeg';
 
 const locations = [
   {
-    name: 'California',
-    address: '20, First Avenue, California - USA',
-    phone: '(00) 123 456 7890',
-    email: 'contact@nutritionbydurdana.com',
-    hours: 'Mon - Fri : 09.00am - 06.00pm',
-    mapUrl: 'https://maps.google.com/maps?q=California,%20USA&t=&z=10&ie=UTF8&iwloc=&output=embed',
+    name: 'Malad West, Mumbai',
+    mall: 'Rustomjee Eaze Zone Mall',
+    address: 'Shop No.3087, 1st floor, Rustomjee Eaze Zone Mall, Malad, Sunder Nagar, Malad West, Mumbai, Maharashtra 400064',
+    phone: '+91 96199 97901',
+    email: 'info@dtdurdana.in',
+    hours: 'Mon - Sat : 10.00am - 08.00pm',
+    mapUrl: 'https://maps.google.com/maps?q=Shop%20No.3087%2C%201st%20floor%2C%20Rustomjee%20Eaze%20Zone%20Mall%2C%20Malad%20West%2C%20Mumbai&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
   {
-    name: 'New York',
-    address: '450 Lexington Ave, New York, NY 10017 - USA',
-    phone: '(00) 987 654 3210',
-    email: 'ny@nutritionbydurdana.com',
-    hours: 'Mon - Sat : 08.30am - 07.00pm',
-    mapUrl: 'https://maps.google.com/maps?q=New%20York,%20USA&t=&z=10&ie=UTF8&iwloc=&output=embed',
+    name: 'Mindspace, Malad',
+    mall: 'Link House',
+    address: '1st Floor, Link House, New Link Rd, Malad, Rajan Pada, Mindspace, Malad West, Mumbai, Maharashtra 400064',
+    phone: '+91 96199 97901',
+    email: 'info@dtdurdana.in',
+    hours: 'Mon - Sat : 10.00am - 07.00pm',
+    mapUrl: 'https://maps.google.com/maps?q=Link%20House%2C%20New%20Link%20Rd%2C%20Malad%20West%2C%20Mumbai&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
 ];
 
@@ -105,12 +109,16 @@ export default function Footer() {
                 <div className="space-y-3.5 text-xs sm:text-[13.5px] text-gray-600">
                   <div className="flex items-center gap-3">
                     <Phone className="w-4 h-4 text-[#5c8d37] flex-shrink-0" />
-                    <span>{loc.phone}</span>
+                    <a href={`tel:${loc.phone.replace(/[^0-9+]/g, '')}`} className="hover:text-[#5c8d37] font-medium transition-colors">
+                      {loc.phone}
+                    </a>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <Mail className="w-4 h-4 text-[#5c8d37] flex-shrink-0" />
-                    <span>{loc.email}</span>
+                    <a href={`mailto:${loc.email}`} className="hover:text-[#5c8d37] transition-colors">
+                      {loc.email}
+                    </a>
                   </div>
 
                   <div className="flex items-center gap-3">
@@ -152,14 +160,25 @@ export default function Footer() {
           </div>
 
           {/* Bottom Copyright & Credit Bar */}
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-xs sm:text-[13px] text-emerald-50 gap-3 text-center sm:text-left">
-            <div>
-              <p>
-                © {new Date().getFullYear()} <strong className="font-semibold text-white">Nutrition By Durdana</strong>. All Rights Reserved.
-              </p>
-              <p className="text-[11px] text-emerald-100/90 mt-0.5 font-medium">
-                Developed and Designed by <span className="font-bold text-white tracking-wide">Shree Krishna Digital Marketing</span>
-              </p>
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-xs sm:text-[13px] text-emerald-50 gap-4 text-center sm:text-left">
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+              <div className="bg-white p-1.5 rounded shadow-sm flex items-center justify-center">
+                <Image
+                  src={brandLogo}
+                  alt="Nutrition By Durdana"
+                  width={160}
+                  height={50}
+                  className="h-10 sm:h-12 w-auto object-contain"
+                />
+              </div>
+              <div>
+                <p>
+                  © {new Date().getFullYear()} <strong className="font-semibold text-white">Nutrition By Durdana</strong>. All Rights Reserved.
+                </p>
+                <p className="text-[11px] text-emerald-100/90 mt-0.5 font-medium">
+                  Developed and Designed by <span className="font-bold text-white tracking-wide">Shree Krishna Digital Marketing</span>
+                </p>
+              </div>
             </div>
 
             {/* Back to Top Leaf Button */}

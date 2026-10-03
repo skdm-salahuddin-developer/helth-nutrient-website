@@ -39,9 +39,19 @@ export default function TopBar() {
   return (
     <div className="bg-[#5c8d37] text-white text-xs sm:text-[13px] py-2 px-4 sm:px-8 transition-colors">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-4">
-        {/* Left message */}
-        <div className="font-normal text-emerald-50 tracking-wide text-center sm:text-left">
-          Welcome to Healthcoach Theme!
+        {/* Left message & Contact Details */}
+        <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 sm:gap-5 text-emerald-50 text-xs sm:text-[13px]">
+          <span className="hidden md:inline-flex items-center gap-1.5 text-emerald-100">
+            <span>📍</span>
+            <span>Shop No.3087, 1st Fl, Rustomjee Eaze Zone Mall, Malad West, Mumbai</span>
+          </span>
+          <a
+            href="tel:+919619997901"
+            className="inline-flex items-center gap-1.5 font-medium hover:text-white transition-colors"
+          >
+            <span>📞</span>
+            <span>+91 96199 97901</span>
+          </a>
         </div>
 
         {/* Right Social Media Icons */}

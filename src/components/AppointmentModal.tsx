@@ -122,15 +122,16 @@ export default function AppointmentModal({ isOpen, onClose }: AppointmentModalPr
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-gray-600 mb-1">Program Choice</label>
+                  <label className="block text-xs font-semibold text-gray-600 mb-1">Service Program</label>
                   <select
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                     className="w-full px-3 py-2 text-sm border border-gray-200 rounded-md focus:outline-none focus:border-[#5c8d37] focus:ring-1 focus:ring-[#5c8d37] bg-white"
                   >
-                    <option>Habit Transformation Coaching</option>
-                    <option>Custom Diet & Nutrition Plan</option>
-                    <option>Holistic Fitness & Lifestyle</option>
+                    <option>Custom Meal Plans</option>
+                    <option>Balanced Nutrition</option>
+                    <option>Sustainable Lifestyle Habits</option>
+                    <option>No Fads, No Gimmicks Program</option>
                     <option>Free 20-min Discovery Call</option>
                   </select>
                 </div>
@@ -143,6 +144,14 @@ export default function AppointmentModal({ isOpen, onClose }: AppointmentModalPr
                 >
                   Confirm Appointment
                 </button>
+              </div>
+
+              <div className="text-center pt-1 text-[11px] text-gray-500">
+                Or call us directly at{' '}
+                <a href="tel:+919619997901" className="text-[#5c8d37] font-semibold hover:underline">
+                  +91 96199 97901
+                </a>{' '}
+                • Malad West, Mumbai
               </div>
             </form>
           )}

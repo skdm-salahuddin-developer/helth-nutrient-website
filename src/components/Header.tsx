@@ -2,34 +2,11 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Search, Menu, X, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
+import { Search, Menu, X, ChevronRight, Phone } from 'lucide-react';
 import AppointmentModal from './AppointmentModal';
 import SearchModal from './SearchModal';
-
-// Custom Organic Leaf SVG that precisely matches the logo style
-const DurdanaLeafLogo = ({ className = "w-8 h-8" }: { className?: string }) => (
-  <svg 
-    viewBox="0 0 48 48" 
-    className={className} 
-    fill="none" 
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path 
-      d="M38 8C23 8 10 21 10 36C25 36 38 23 38 8Z" 
-      fill="#5c8d37" 
-    />
-    <path 
-      d="M23 23C15 25 10 32 10 36C14 36 21 31 23 23Z" 
-      fill="#456c28" 
-    />
-    <path 
-      d="M10 36C18 30 28 20 38 8" 
-      stroke="#ffffff" 
-      strokeWidth="1.2" 
-      strokeLinecap="round" 
-    />
-  </svg>
-);
+import brandLogo from '../../logo (2).jpeg';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -41,27 +18,26 @@ export default function Header() {
     { name: 'Home', href: '#' },
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
-    { name: 'Programs', href: '#programs' },
+    { name: 'Why Us', href: '#why-us' },
     { name: 'Contact', href: '#contact' },
   ];
 
   return (
     <>
-      <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-40 transition-all duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 sm:py-4 flex items-center justify-between">
+      <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-40 transition-all duration-300 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 py-2.5 sm:py-3 flex items-center justify-between">
           
           {/* Logo Section */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="transform group-hover:rotate-6 transition-transform duration-300">
-              <DurdanaLeafLogo className="w-9 h-9 sm:w-10 sm:h-10" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-serif text-2xl sm:text-[26px] font-bold text-[#48732c] tracking-tight leading-none">
-                Nutrition
-              </span>
-              <span className="text-[10px] sm:text-[11px] font-semibold text-gray-700 tracking-[0.24em] uppercase mt-1">
-                By Durdana
-              </span>
+          <Link href="/" className="flex items-center group py-1">
+            <div className="relative flex items-center">
+              <Image
+                src={brandLogo}
+                alt="Nutrition By Durdana Logo"
+                height={90}
+                width={280}
+                className="h-16 sm:h-20 lg:h-22 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                priority
+              />
             </div>
           </Link>
 
