@@ -10,7 +10,7 @@ export default function Transformation90Days() {
 
   return (
     <>
-      <section className="py-16 md:py-24 bg-[#fbfdf9] relative overflow-hidden">
+      <section id="transformation" className="py-16 md:py-24 bg-[#fbfdf9] relative overflow-hidden scroll-mt-20">
         {/* Subtle background glow */}
         <div className="absolute top-10 right-10 w-72 h-72 bg-[#5c8d37]/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-[#5c8d37]/5 rounded-full blur-3xl pointer-events-none" />

@@ -60,7 +60,7 @@ export default function WhyChooseUs() {
 
   return (
     <>
-      <section id="why-us" className="py-16 md:py-24 bg-white relative">
+      <section id="why-us" className="py-16 md:py-24 bg-white relative scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           
           {/* Top Row: Left Green Card with Yoga Silhouette & Right Why Choose Us Content */}

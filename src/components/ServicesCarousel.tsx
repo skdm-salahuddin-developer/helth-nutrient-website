@@ -95,7 +95,7 @@ export default function ServicesCarousel() {
 
   return (
     <>
-      <section id="services" className="py-16 md:py-24 bg-[#fafbfa] relative overflow-hidden">
+      <section id="services" className="py-16 md:py-24 bg-[#fafbfa] relative overflow-hidden scroll-mt-20">
         {/* Subtle decorative background blur */}
         <div className="absolute top-1/4 -left-20 w-80 h-80 bg-[#5c8d37]/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-10 -right-20 w-96 h-96 bg-[#5c8d37]/5 rounded-full blur-3xl pointer-events-none" />

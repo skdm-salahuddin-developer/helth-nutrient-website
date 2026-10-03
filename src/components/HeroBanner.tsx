@@ -61,7 +61,7 @@ export default function HeroBanner() {
 
   return (
     <>
-      <section className="relative w-full min-h-[580px] lg:min-h-[660px] xl:min-h-[720px] overflow-hidden flex items-center bg-[#f8f9f6]">
+      <section id="home" className="relative w-full min-h-[580px] lg:min-h-[660px] xl:min-h-[720px] overflow-hidden flex items-center bg-[#f8f9f6] scroll-mt-20">
         {/* Background Images - Clean, without any text overlays on the image */}
         <div className="absolute inset-0 z-0">
           {slides.map((s, idx) => (

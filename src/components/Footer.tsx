@@ -39,7 +39,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer id="contact" className="bg-[#5c8d37] pt-12 sm:pt-16 pb-6 relative text-white">
+      <footer id="contact" className="bg-[#5c8d37] pt-12 sm:pt-16 pb-6 relative text-white scroll-mt-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-8">
           
           {/* Main Floating White Contact & Location Card */}

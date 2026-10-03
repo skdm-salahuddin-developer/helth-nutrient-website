@@ -47,7 +47,7 @@ export default function FAQSection() {
 
   return (
     <>
-      <section id="faq" className="py-16 md:py-24 bg-[#fbfdf9] relative overflow-hidden">
+      <section id="faq" className="py-16 md:py-24 bg-[#fbfdf9] relative overflow-hidden scroll-mt-20">
         {/* Decorative background glow */}
         <div className="absolute top-1/2 -left-20 w-80 h-80 bg-[#5c8d37]/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute top-1/4 -right-20 w-80 h-80 bg-[#5c8d37]/5 rounded-full blur-3xl pointer-events-none" />
