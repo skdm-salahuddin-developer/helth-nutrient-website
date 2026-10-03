@@ -10,6 +10,7 @@ import ServicesCarousel from '@/components/ServicesCarousel';
 import FourStepsProcess from '@/components/FourStepsProcess';
 import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
+import StickyWhatsApp from '@/components/StickyWhatsApp';
 
 export default function Home() {
   return (
@@ -46,6 +47,9 @@ export default function Home() {
 
       {/* 11. Footer with Map, Location & Developer Credits */}
       <Footer />
+
+      {/* 12. Floating Sticky WhatsApp Button on Right Side */}
+      <StickyWhatsApp />
     </main>
   );
 }
