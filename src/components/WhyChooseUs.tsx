@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Sparkles, ArrowRight, Check, ShieldCheck, HeartPulse } from 'lucide-react';
+import { Sparkles, ArrowRight, Check, ShieldCheck, HeartPulse, MessageCircle } from 'lucide-react';
 import AppointmentModal from './AppointmentModal';
 
 // Lotus Yoga Silhouette SVG matching the screenshot
@@ -27,28 +27,28 @@ const bottomGallery = [
   {
     id: 1,
     title: 'Nature Foods for Health',
-    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop',
+    image: '/images/gallery-1.jpg',
     alt: 'Mindful wellness and outdoor movement',
     highlighted: false,
   },
   {
     id: 2,
     title: 'Expert Health Advisor',
-    image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800&auto=format&fit=crop',
+    image: '/images/gallery-2.jpg',
     alt: 'Guided fitness and posture coaching',
     highlighted: false,
   },
   {
     id: 3,
     title: 'Nature Foods for Health',
-    image: 'https://images.unsplash.com/photo-1576402187878-974f70c890a5?q=80&w=800&auto=format&fit=crop',
+    image: '/images/gallery-3.jpg',
     alt: 'One-on-one nutrition consultation',
     highlighted: true,
   },
   {
     id: 4,
     title: 'Drink with Salads',
-    image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=800&auto=format&fit=crop',
+    image: '/images/gallery-4.jpg',
     alt: 'Fresh antioxidant fruit and salad meal',
     highlighted: false,
   },
@@ -70,7 +70,7 @@ export default function WhyChooseUs() {
             <div className="lg:col-span-5 relative h-[320px] sm:h-[380px] rounded-sm overflow-hidden shadow-lg bg-[#5c8d37] flex flex-col justify-between p-8 text-center">
               {/* Background Image with Green Color Multiply Blend */}
               <Image
-                src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1200&auto=format&fit=crop"
+                src="/images/why-us-main.jpg"
                 alt="Health consultation and holistic wellness"
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"
@@ -122,21 +122,25 @@ export default function WhyChooseUs() {
                 </div>
               </div>
 
-              {/* Two CTA Buttons matching screenshot */}
+              {/* Action Buttons: WhatsApp & Contact Redirects */}
               <div className="flex flex-wrap items-center gap-4 mt-8 pt-2">
-                <button
-                  onClick={() => setModalOpen(true)}
-                  className="bg-[#5c8d37] hover:bg-[#48732c] text-white px-7 py-3 rounded-[3px] font-semibold text-sm tracking-wide transition-all duration-300 shadow-sm hover:shadow-md"
+                <a
+                  href="https://wa.me/919619997901?text=Hello%20Dt.%20Durdana,%20I%20am%20interested%20in%20consulting%20with%20you."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1faa4e] text-white px-7 py-3 rounded-[3px] text-sm font-semibold tracking-wide transition-all duration-300 shadow-sm hover:shadow-md active:scale-95"
                 >
-                  Read More
-                </button>
+                  <MessageCircle className="w-4 h-4 fill-white" />
+                  <span>Chat on WhatsApp</span>
+                </a>
 
-                <button
-                  onClick={() => setAppointmentOpen(true)}
-                  className="bg-[#1c221b] hover:bg-[#5c8d37] text-white px-7 py-3 rounded-[3px] font-semibold text-sm tracking-wide transition-all duration-300 shadow-sm hover:shadow-md"
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-2 bg-[#1c221b] hover:bg-[#5c8d37] text-white px-6 py-3 rounded-[3px] text-sm font-semibold tracking-wide transition-all duration-300 shadow-sm hover:shadow-md active:scale-95"
                 >
-                  Join Now
-                </button>
+                  <span>Contact Clinic</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
               </div>
             </div>
 

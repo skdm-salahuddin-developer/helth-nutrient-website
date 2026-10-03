@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { Phone, Mail, Clock, Calendar, ChevronDown, ChevronUp, ArrowUp } from 'lucide-react';
 import AppointmentModal from './AppointmentModal';
-import brandLogo from '../../logo (2).jpeg';
 
 const locations = [
   {
@@ -147,7 +146,7 @@ export default function Footer() {
                 <div className="pt-2">
                   <button
                     onClick={() => setAppointmentOpen(true)}
-                    className="w-full bg-[#1c221b] hover:bg-[#5c8d37] text-white py-3 px-6 rounded-[3px] font-semibold text-xs sm:text-sm tracking-wider uppercase flex items-center justify-center gap-2.5 transition-colors duration-300 shadow-sm hover:shadow-md"
+                    className="w-full bg-[#1c221b] hover:bg-[#5c8d37] text-white py-3 px-6 rounded-[3px] font-semibold text-xs sm:text-sm tracking-wider uppercase flex items-center justify-center gap-2.5 transition-colors duration-300 shadow-sm hover:shadow-md cursor-pointer"
                   >
                     <Calendar className="w-4 h-4" />
                     <span>Book Now</span>
@@ -164,32 +163,37 @@ export default function Footer() {
             <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
               <div className="bg-white p-1.5 rounded shadow-sm flex items-center justify-center">
                 <Image
-                  src={brandLogo}
+                  src="/logo3.png"
                   alt="Nutrition By Durdana"
                   width={160}
                   height={50}
                   className="h-10 sm:h-12 w-auto object-contain"
+                  unoptimized
                 />
               </div>
               <div>
                 <p>
-                  © {new Date().getFullYear()} <strong className="font-semibold text-white">Nutrition By Durdana</strong>. All Rights Reserved.
+                  Shop No.3087, 1st floor, Rustomjee Eaze Zone Mall, Malad West, Mumbai
                 </p>
-                <p className="text-[11px] text-emerald-100/90 mt-0.5 font-medium">
-                  Developed and Designed by <span className="font-bold text-white tracking-wide">Shree Krishna Digital Marketing</span>
+                <p className="text-[11px] text-emerald-100/80 mt-0.5">
+                  © {new Date().getFullYear()} Dt. Durdana. All rights reserved. Holistic Clinical Nutrition & Ayurveda.
                 </p>
               </div>
             </div>
 
-            {/* Back to Top Leaf Button */}
-            <button
-              onClick={scrollToTop}
-              className="flex items-center gap-1.5 bg-[#49702a] hover:bg-[#3b5d20] text-white px-3.5 py-2 rounded-full text-xs font-semibold shadow-sm transition-all duration-300 hover:scale-105"
-              aria-label="Scroll to top"
-            >
-              <span>Top</span>
-              <ArrowUp className="w-3.5 h-3.5" />
-            </button>
+            {/* Quick Links & Back to Top */}
+            <div className="flex items-center gap-5">
+              <a href="#about" className="hover:text-white transition-colors">About</a>
+              <a href="#services" className="hover:text-white transition-colors">Services</a>
+              <a href="#why-us" className="hover:text-white transition-colors">Why Us</a>
+              <button
+                onClick={scrollToTop}
+                className="w-8 h-8 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#5c8d37] flex items-center justify-center transition-all duration-200"
+                aria-label="Scroll to top"
+              >
+                <ArrowUp className="w-4 h-4" />
+              </button>
+            </div>
           </div>
 
         </div>

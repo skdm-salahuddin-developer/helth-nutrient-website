@@ -41,7 +41,7 @@ export default function FourStepsProcess() {
         {/* Background Image - Clear, bright & clearly visible */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=2000&auto=format&fit=crop"
+            src="/images/four-steps.jpg"
             alt="Healthy living lifestyle background"
             fill
             sizes="100vw"

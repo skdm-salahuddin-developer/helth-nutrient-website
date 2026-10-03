@@ -7,19 +7,19 @@ const featureCards = [
   {
     id: 1,
     title: 'Healthy Meals Tips',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/hero-slide-1.jpg',
     alt: 'Pouring dressing over a healthy salad bowl',
   },
   {
     id: 2,
     title: 'Recipes Idea',
-    image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/gallery-4.jpg',
     alt: 'Fresh fruit salad and avocado breakfast flatlay',
   },
   {
     id: 3,
     title: 'Healthy Meals Tips',
-    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/gallery-1.jpg',
     alt: 'Mindful meditation and healthy balance lifestyle',
   },
 ];

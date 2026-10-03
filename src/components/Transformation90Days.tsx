@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Dumbbell, Atom, ArrowRight } from 'lucide-react';
+import { Dumbbell, Atom, ArrowRight, MessageCircle } from 'lucide-react';
 import AppointmentModal from './AppointmentModal';
 
 export default function Transformation90Days() {
@@ -22,7 +22,7 @@ export default function Transformation90Days() {
             <div className="lg:col-span-5 relative">
               <div className="relative h-[440px] sm:h-[500px] w-full rounded-md overflow-hidden shadow-lg bg-emerald-50/50">
                 <Image
-                  src="https://images.unsplash.com/photo-1543362906-acfc16c67564?q=80&w=1200&auto=format&fit=crop"
+                  src="/images/transformation-90days.jpg"
                   alt="Healthy organic meal preparation"
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"
@@ -82,15 +82,24 @@ export default function Transformation90Days() {
 
               </div>
 
-              {/* Action Button */}
-              <div className="mt-8 pt-2">
-                <button
-                  onClick={() => setAppointmentOpen(true)}
-                  className="inline-flex items-center gap-2 bg-[#1c221b] hover:bg-[#5c8d37] text-white px-7 py-3 rounded-[3px] text-sm font-semibold tracking-wide transition-all duration-300 shadow-sm hover:shadow-md active:scale-95"
+              {/* Action Buttons: WhatsApp & Contact Redirects */}
+              <div className="mt-8 pt-2 flex flex-wrap items-center gap-4">
+                <a
+                  href="https://wa.me/919619997901?text=Hello%20Dt.%20Durdana,%20I%20am%20interested%20in%20the%2090-Day%20Transformation%20program."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1faa4e] text-white px-7 py-3 rounded-[3px] text-sm font-semibold tracking-wide transition-all duration-300 shadow-sm hover:shadow-md active:scale-95"
                 >
-                  <span>Start Your 90-Day Transformation</span>
+                  <MessageCircle className="w-4 h-4 fill-white" />
+                  <span>Start 90-Day on WhatsApp</span>
+                </a>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-2 bg-[#1c221b] hover:bg-[#5c8d37] text-white px-6 py-3 rounded-[3px] text-sm font-semibold tracking-wide transition-all duration-300 shadow-sm hover:shadow-md active:scale-95"
+                >
+                  <span>Contact Clinic</span>
                   <ArrowRight className="w-4 h-4" />
-                </button>
+                </a>
               </div>
 
             </div>

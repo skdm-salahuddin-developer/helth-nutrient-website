@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { CheckCircle, Leaf, ArrowRight } from 'lucide-react';
+import { CheckCircle, Leaf, ArrowRight, MessageCircle } from 'lucide-react';
 import AppointmentModal from './AppointmentModal';
 
 export default function AboutUs() {
@@ -28,23 +28,19 @@ export default function AboutUs() {
     <>
       <section id="about" className="py-16 md:py-24 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             
-            {/* Left Image Column - Confident, Professional Indian Nutritionist & Wellness Consultant */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative h-[430px] sm:h-[500px] w-full rounded-md overflow-hidden shadow-lg bg-emerald-50/30">
+            {/* Left Image Column - Dt. Durdana seamlessly merged with background */}
+            <div className="lg:col-span-5 relative flex items-start justify-center">
+              <div className="relative h-[480px] sm:h-[560px] lg:h-[620px] w-full -mt-2 sm:-mt-6">
                 <Image
-                  src={
-                    imgError
-                      ? 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1200&auto=format&fit=crop'
-                      : 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop'
-                  }
-                  alt="Durdana - Professional Nutritionist and Health Advisor"
+                  src="/about1.webp"
+                  alt="Dt. Durdana - Clinical Nutritionist and Health Advisor"
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"
-                  className="object-cover object-top"
-                  onError={() => setImgError(true)}
+                  className="object-contain object-top"
                   priority
+                  unoptimized
                 />
               </div>
             </div>
@@ -99,18 +95,21 @@ export default function AboutUs() {
 
               {/* CTA Section */}
               <div className="mt-8 pt-2 flex flex-wrap items-center gap-4">
-                <button
-                  onClick={() => setAppointmentOpen(true)}
-                  className="inline-flex items-center gap-2 bg-[#1c221b] hover:bg-[#5c8d37] text-white px-7 py-3 rounded-[3px] text-sm font-semibold tracking-wide transition-all duration-300 shadow-sm hover:shadow-md active:scale-95"
-                >
-                  <span>Start Your Personal Plan</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
                 <a
-                  href="#services"
-                  className="text-xs sm:text-sm font-semibold text-gray-700 hover:text-[#5c8d37] px-3 py-2 transition-colors"
+                  href="https://wa.me/919619997901?text=Hello%20Dt.%20Durdana,%20I%20would%20like%20to%20start%20my%20personalized%20nutrition%20plan."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1faa4e] text-white px-7 py-3 rounded-[3px] text-sm font-semibold tracking-wide transition-all duration-300 shadow-sm hover:shadow-md active:scale-95"
                 >
-                  Explore All Programs →
+                  <MessageCircle className="w-4 h-4 fill-white" />
+                  <span>Start Plan on WhatsApp</span>
+                </a>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-2 bg-[#1c221b] hover:bg-[#5c8d37] text-white px-6 py-3 rounded-[3px] text-sm font-semibold tracking-wide transition-all duration-300 shadow-sm hover:shadow-md active:scale-95"
+                >
+                  <span>Contact Clinic</span>
+                  <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
 

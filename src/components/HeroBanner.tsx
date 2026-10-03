@@ -12,7 +12,7 @@ const slides = [
     subtitle:
       'Learn about the best creative fitness & diet courses & get the most of it. Enroll in our programs & get the best offers & tips for limited time.',
     ctaText: 'Learn More About Our Program',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=2084&auto=format&fit=crop',
+    image: '/images/hero-slide-1.jpg',
     imageAlt: 'Healthy organic nutrition and salad',
   },
   {
@@ -21,7 +21,7 @@ const slides = [
     subtitle:
       'Personalized nutrition guidance crafted for your lifestyle. Build intuitive wellness habits with certified nutritionists by your side.',
     ctaText: 'Discover Nutrition Plans',
-    image: 'https://images.unsplash.com/photo-1556911073-38141963c9e0?q=80&w=2084&auto=format&fit=crop',
+    image: '/images/hero-slide-2.jpg',
     imageAlt: 'Fresh vegetable meal prep and herbs',
   },
   {
@@ -30,7 +30,7 @@ const slides = [
     subtitle:
       'Reclaim your natural energy with sustainable routines. Small daily shifts that compound into lifelong vitality and confidence.',
     ctaText: 'Explore Mindful Living',
-    image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=2084&auto=format&fit=crop',
+    image: '/images/hero-slide-3.jpg',
     imageAlt: 'Fresh organic greens and smoothies',
   },
 ];

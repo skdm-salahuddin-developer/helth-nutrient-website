@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Leaf, ArrowUpRight, ExternalLink, X, Calendar, CheckCircle2, ChevronRight } from 'lucide-react';
+import { Leaf, ArrowUpRight, ExternalLink, X, Calendar, CheckCircle2, ChevronRight, MessageCircle } from 'lucide-react';
 import AppointmentModal from './AppointmentModal';
 
 export interface ServiceItem {
@@ -26,8 +26,8 @@ export const servicesData: ServiceItem[] = [
     description:
       'Individually tailored meal schedules crafted around your metabolic rate, work hours, clinical history, and dietary preferences for consistent, lifelong results.',
     link: 'https://dtdurdana.in/personalized-diet-plans/',
-    image: 'https://dtdurdana.in/wp-content/uploads/2025/12/high-view-lunch-boxes-work-schedules-scaled.jpg',
-    fallbackImage: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/service-custom-meal-plans.jpg',
+    fallbackImage: '/images/hero-slide-1.jpg',
     benefits: [
       'Macronutrient & calorie balanced',
       'Accommodates busy work schedules',
@@ -42,8 +42,8 @@ export const servicesData: ServiceItem[] = [
     description:
       'Nutrient-dense daily meal combinations designed to stabilize insulin levels, heal the gut microbiome, and sustain energy from morning to evening.',
     link: 'https://dtdurdana.in/balanced-diet-plan-for-daily-lifestyle/',
-    image: 'https://dtdurdana.in/wp-content/uploads/2025/12/glossy-background-featuring-diabetic-meal-plate-with-nutritional-icons-concept-as-glossy-backgro_980716-672015.avif',
-    fallbackImage: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/service-balanced-nutrition.avif',
+    fallbackImage: '/images/gallery-4.jpg',
     benefits: [
       'Clinically guided diabetes & lipid balance',
       'Ayurvedic food combining principles',
@@ -58,8 +58,8 @@ export const servicesData: ServiceItem[] = [
     description:
       'Build long-term mindful habits that seamlessly integrate into your social life and routine, preventing yo-yo weight cycles and burnout.',
     link: 'https://dtdurdana.in/healthy-lifestyle-changes/',
-    image: 'https://dtdurdana.in/wp-content/uploads/2025/12/Sustainable-Lifestyle-Habits.jpg',
-    fallbackImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/service-sustainable-habits.jpg',
+    fallbackImage: '/images/gallery-1.jpg',
     benefits: [
       'Mindful eating & craving management',
       'Circadian rhythm and sleep synchronization',
@@ -74,8 +74,8 @@ export const servicesData: ServiceItem[] = [
     description:
       'Pure evidence-based nutritional medicine free from magic pills, crash cleanses, or unsustainable deprivation. Just wholesome, nourishing food that works.',
     link: 'https://dtdurdana.in/no-fad-diets-plan/',
-    image: 'https://dtdurdana.in/wp-content/uploads/2025/12/No-Fads-No-Gimmicks-bg.webp',
-    fallbackImage: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/service-no-fads.webp',
+    fallbackImage: '/images/why-us-main.jpg',
     benefits: [
       'Zero restrictive juice fasts or pills',
       'Transparent, medically sound methodology',
@@ -127,30 +127,16 @@ export default function ServicesCarousel() {
                   key={service.id}
                   className="group relative bg-white rounded-lg border border-gray-200/80 shadow-sm hover:shadow-xl hover:border-[#5c8d37] transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1.5"
                 >
-                  {/* Top Image Container */}
+                  {/* Top Image Container - Clean image with NO overlays or text */}
                   <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-gray-100">
                     <Image
                       src={currentSrc}
                       alt={service.title}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
                       onError={() => handleImageError(service.id)}
                     />
-                    {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-
-                    {/* Badge */}
-                    <div className="absolute top-3.5 left-3.5">
-                      <span className="bg-white/95 backdrop-blur-sm text-[#48732c] text-[11px] font-bold px-2.5 py-1 rounded-[2px] uppercase tracking-wider shadow-sm">
-                        {service.badge}
-                      </span>
-                    </div>
-
-                    {/* Red Accent Dot */}
-                    <div className="absolute top-4 right-4">
-                      <div className="w-2.5 h-2.5 rounded-full bg-[#d6453d] ring-4 ring-white/20" />
-                    </div>
                   </div>
 
                   {/* Card Body */}
@@ -167,26 +153,17 @@ export default function ServicesCarousel() {
                       </p>
                     </div>
 
-                    {/* Action Buttons Row */}
-                    <div className="pt-6 mt-4 border-t border-gray-100 flex items-center justify-between gap-2">
-                      {/* View More External Link Button (as requested by user) */}
+                    {/* Action Button: Direct WhatsApp Redirect */}
+                    <div className="pt-4 mt-4 border-t border-gray-100">
                       <a
-                        href={service.link}
+                        href={`https://wa.me/919619997901?text=Hello%20Dt.%20Durdana,%20I%20would%20like%20to%20enquire%20about%20${encodeURIComponent(service.title)}.`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#48732c] hover:text-[#2d491a] uppercase tracking-wider group-hover:underline underline-offset-4 transition-colors"
+                        className="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1faa4e] text-white py-2.5 px-4 rounded-[4px] text-xs font-semibold tracking-wide transition-all duration-200 shadow-sm hover:shadow active:scale-95"
                       >
-                        <span>View More</span>
-                        <ArrowUpRight className="w-3.5 h-3.5" />
+                        <MessageCircle className="w-4 h-4 fill-white" />
+                        <span>Enquire on WhatsApp</span>
                       </a>
-
-                      {/* Quick Details Trigger */}
-                      <button
-                        onClick={() => setSelectedService(service)}
-                        className="text-xs text-gray-500 hover:text-gray-900 font-medium px-2 py-1 rounded hover:bg-gray-50 transition-colors"
-                      >
-                        Details
-                      </button>
                     </div>
                   </div>
 
@@ -224,34 +201,28 @@ export default function ServicesCarousel() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn">
           <div className="bg-white rounded-xl shadow-2xl max-w-lg w-full overflow-hidden border border-gray-100 relative">
             
-            {/* Modal Image Header */}
-            <div className="relative h-44 w-full bg-gray-100">
+            {/* Modal Image Header - Clean image without text overlay */}
+            <div className="relative h-48 w-full bg-gray-100">
               <Image
                 src={imageErrors[selectedService.id] ? selectedService.fallbackImage : selectedService.image}
                 alt={selectedService.title}
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20" />
               <button
                 onClick={() => setSelectedService(null)}
-                className="absolute top-3.5 right-3.5 bg-black/40 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors"
+                className="absolute top-3.5 right-3.5 bg-black/60 hover:bg-black/80 text-white rounded-full p-1.5 transition-colors z-10"
                 aria-label="Close modal"
               >
                 <X className="w-4 h-4" />
               </button>
-              <div className="absolute bottom-4 left-5 right-5 text-white">
-                <span className="text-[10px] font-bold uppercase tracking-widest bg-[#5c8d37] px-2 py-0.5 rounded text-white">
-                  {selectedService.badge}
-                </span>
-                <h4 className="font-serif text-2xl font-bold mt-1.5 leading-snug">
-                  {selectedService.title}
-                </h4>
-              </div>
             </div>
 
             {/* Modal Content */}
             <div className="p-6 sm:p-7 space-y-4">
+              <h4 className="font-serif text-2xl font-bold text-[#1e231e] leading-snug">
+                {selectedService.title}
+              </h4>
               <p className="text-xs sm:text-sm font-medium text-[#48732c] italic">
                 “{selectedService.tagline}”
               </p>
@@ -272,26 +243,25 @@ export default function ServicesCarousel() {
               </div>
 
               {/* Action Buttons */}
+              {/* Action Buttons: WhatsApp & Contact Redirects */}
               <div className="pt-2 flex flex-col sm:flex-row gap-3">
                 <a
-                  href={selectedService.link}
+                  href={`https://wa.me/919619997901?text=Hello%20Dt.%20Durdana,%20I%20would%20like%20to%20enquire%20about%20${encodeURIComponent(selectedService.title)}.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 bg-[#5c8d37] hover:bg-[#48732c] text-white py-2.5 px-4 rounded text-center font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition"
+                  className="flex-1 bg-[#25D366] hover:bg-[#1faa4e] text-white py-2.5 px-4 rounded text-center font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition shadow-sm active:scale-95"
                 >
-                  <span>Open Full Program Page</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
+                  <MessageCircle className="w-4 h-4 fill-white" />
+                  <span>Enquire on WhatsApp</span>
                 </a>
 
-                <button
-                  onClick={() => {
-                    setSelectedService(null);
-                    setAppointmentOpen(true);
-                  }}
-                  className="bg-[#1c221b] hover:bg-gray-800 text-white py-2.5 px-4 rounded text-center font-semibold text-xs uppercase tracking-wider transition"
+                <a
+                  href="#contact"
+                  onClick={() => setSelectedService(null)}
+                  className="bg-[#1c221b] hover:bg-[#5c8d37] text-white py-2.5 px-4 rounded text-center font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition"
                 >
-                  Book Appointment
-                </button>
+                  <span>Contact Clinic</span>
+                </a>
               </div>
             </div>
 
