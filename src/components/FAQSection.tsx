@@ -35,6 +35,12 @@ const faqs = [
     answer:
       'You can easily book an appointment by clicking the "Book An Appointment" button on this page. We will schedule a 1-on-1 discovery session to review your health history, current habits, and craft your step-by-step roadmap.',
   },
+  {
+    id: 6,
+    question: 'Where is your clinic located, and do you offer online nutrition consultations?',
+    answer:
+      'Our physical clinic is located at Shop No.3087, 1st floor, Rustomjee Eaze Zone Mall, Malad West, Mumbai. In addition to in-person consultations, we provide seamless online consultation programs for clients across Mumbai, India, and globally via video call and WhatsApp.',
+  },
 ];
 
 export default function FAQSection() {

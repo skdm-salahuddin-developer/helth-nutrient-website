@@ -8,19 +8,19 @@ const featureCards = [
     id: 1,
     title: 'Healthy Meals Tips',
     image: '/images/hero-slide-1.jpg',
-    alt: 'Pouring dressing over a healthy salad bowl',
+    alt: 'Healthy organic clinical nutrition and meal planning tips - Nutrition By Durdana',
   },
   {
     id: 2,
     title: 'Recipes Idea',
     image: '/images/gallery-4.jpg',
-    alt: 'Fresh fruit salad and avocado breakfast flatlay',
+    alt: 'Nutrient dense recipes and balanced diet ideas by Dietitian Dt. Durdana',
   },
   {
     id: 3,
     title: 'Healthy Meals Tips',
     image: '/images/gallery-1.jpg',
-    alt: 'Mindful meditation and healthy balance lifestyle',
+    alt: 'Mindful wellness and natural lifestyle health advice in Malad West Mumbai',
   },
 ];
 

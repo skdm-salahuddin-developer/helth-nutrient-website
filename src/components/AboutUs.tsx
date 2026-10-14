@@ -35,7 +35,7 @@ export default function AboutUs() {
               <div className="relative h-[480px] sm:h-[560px] lg:h-[620px] w-full -mt-2 sm:-mt-6">
                 <Image
                   src="/about1.webp"
-                  alt="Dt. Durdana - Clinical Nutritionist and Health Advisor"
+                  alt="Dt. Durdana - Clinical Nutritionist and Health Advisor in Malad West, Mumbai"
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-contain object-top"

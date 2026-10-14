@@ -9,25 +9,25 @@ const steps = [
   {
     id: 1,
     title: 'Contact Us',
-    description: 'Etiam sit amet orci eget eros faucibus tincidunt.',
+    description: 'Reach out via Call or WhatsApp to share your health goals and lifestyle concerns.',
     icon: FileText,
   },
   {
     id: 2,
     title: 'Appointment',
-    description: 'Etiam sit amet orci eget eros faucibus tincidunt.',
+    description: 'Schedule a 1-on-1 personalized discovery session with Clinical Nutritionist Dt. Durdana.',
     icon: Clock,
   },
   {
     id: 3,
     title: 'Analysis',
-    description: 'Etiam sit amet orci eget eros faucibus tincidunt.',
+    description: 'Comprehensive metabolic, gut health, and body constitution assessment to pinpoint root causes.',
     icon: Heart,
   },
   {
     id: 4,
     title: 'Happy Life',
-    description: 'Etiam sit amet orci eget eros faucibus tincidunt.',
+    description: 'Follow your sustainable Ayurvedic and medical nutrition blueprint for long-term health.',
     icon: ShieldCheck,
   },
 ];

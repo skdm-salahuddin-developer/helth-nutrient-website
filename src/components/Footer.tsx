@@ -25,12 +25,12 @@ const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 );
 
 const clinicLocation = {
-  name: 'Malad West, Mumbai',
-  mall: 'Rustomjee Eaze Zone Mall',
-  address: 'Shop No.3087, 1st floor, Rustomjee Eaze Zone Mall, Malad, Sunder Nagar, Malad West, Mumbai, Maharashtra 400064',
+  name: 'Durdana',
+  role: 'Clinical Nutritionist & Health Advisor',
+  address: 'Shop No.3087, 1st floor, Rustomjee Eaze Zone Mall, Sunder Nagar, Malad West, Mumbai, Maharashtra 400064',
   phone: '+91 96199 97901',
   email: 'nutritionbydurdana@gmail.com',
-  mapUrl: 'https://maps.google.com/maps?q=Shop%20No.3087%2C%201st%20floor%2C%20Rustomjee%20Eaze%20Zone%20Mall%2C%20Malad%20West%2C%20Mumbai&t=&z=15&ie=UTF8&iwloc=&output=embed',
+  mapUrl: 'https://maps.google.com/maps?q=Nutrition%20By%20Durdana%2C%20Malad%20West%2C%20Mumbai&t=&z=16&ie=UTF8&iwloc=B&output=embed',
 };
 
 export default function Footer() {
@@ -52,7 +52,7 @@ export default function Footer() {
               {/* Left Column: Embedded Styled Map */}
               <div className="lg:col-span-7 h-[280px] sm:h-[340px] w-full rounded-[2px] overflow-hidden border border-gray-200 relative bg-gray-50 shadow-inner">
                 <iframe
-                  title="Location Map"
+                  title="Durdana - Clinical Nutritionist Location Map in Malad West, Mumbai"
                   src={clinicLocation.mapUrl}
                   width="100%"
                   height="100%"
@@ -72,6 +72,9 @@ export default function Footer() {
                   <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-[#1e231e]">
                     {clinicLocation.name}
                   </h3>
+                  <p className="text-xs text-[#5c8d37] font-semibold tracking-wide uppercase mt-1">
+                    {clinicLocation.role}
+                  </p>
                   <p className="text-xs sm:text-[13px] text-gray-500 mt-2 font-normal leading-relaxed">
                     {clinicLocation.address}
                   </p>

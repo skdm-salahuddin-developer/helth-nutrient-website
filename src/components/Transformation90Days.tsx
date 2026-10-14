@@ -23,7 +23,7 @@ export default function Transformation90Days() {
               <div className="relative h-[440px] sm:h-[500px] w-full rounded-md overflow-hidden shadow-lg bg-emerald-50/50">
                 <Image
                   src="/images/transformation-90days.jpg"
-                  alt="Healthy organic meal preparation"
+                  alt="90 Days Nutrition Transformation Program by Dt. Durdana - Clinical Dietitian Mumbai"
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-cover object-center"

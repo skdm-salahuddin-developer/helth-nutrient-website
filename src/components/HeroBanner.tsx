@@ -8,30 +8,30 @@ import AppointmentModal from './AppointmentModal';
 const slides = [
   {
     id: 1,
-    title: 'You Can Transform Health Through Habit Change!',
+    title: 'Mindful Daily Habits For Lasting Vitality',
     subtitle:
-      'Learn about the best creative fitness & diet courses & get the most of it. Enroll in our programs & get the best offers & tips for limited time.',
-    ctaText: 'Learn More About Our Program',
-    image: '/images/hero-slide-1.jpg',
-    imageAlt: 'Healthy organic nutrition and salad',
+      'Reclaim your natural energy with sustainable routines. Small daily shifts that compound into lifelong vitality, hormonal balance, and confidence.',
+    ctaText: 'Explore Mindful Living',
+    image: '/images/hero-slide-3.jpg',
+    imageAlt: 'Mindful Daily Habits For Lasting Vitality - Nutrition By Durdana Mumbai',
   },
   {
     id: 2,
     title: 'Nourish Your Body With Clean & Balanced Meals',
     subtitle:
-      'Personalized nutrition guidance crafted for your lifestyle. Build intuitive wellness habits with certified nutritionists by your side.',
+      'Personalized nutrition guidance crafted for your lifestyle. Build intuitive wellness habits with certified nutritionists in Mumbai by your side.',
     ctaText: 'Discover Nutrition Plans',
     image: '/images/hero-slide-2.jpg',
-    imageAlt: 'Fresh vegetable meal prep and herbs',
+    imageAlt: 'Balanced meals and holistic clinical nutrition by Dt. Durdana',
   },
   {
     id: 3,
-    title: 'Mindful Daily Habits For Lasting Vitality',
+    title: 'You Can Transform Health Through Habit Change!',
     subtitle:
-      'Reclaim your natural energy with sustainable routines. Small daily shifts that compound into lifelong vitality and confidence.',
-    ctaText: 'Explore Mindful Living',
-    image: '/images/hero-slide-3.jpg',
-    imageAlt: 'Fresh organic greens and smoothies',
+      'Consult Dt. Durdana, Clinical Nutritionist in Malad West, Mumbai. Personalized dietary programs rooted in Ayurveda and medical science to heal your body naturally.',
+    ctaText: 'Learn More About Our Program',
+    image: '/images/hero-slide-1.jpg',
+    imageAlt: 'Clinical nutrition and personalized diet planning - Nutrition By Durdana Mumbai',
   },
 ];
 
@@ -80,7 +80,8 @@ export default function HeroBanner() {
                 sizes="100vw"
                 quality={90}
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-white/10 to-white/70 lg:to-white/40" />
+              {/* Clean, natural image with subtle contrast - zero white wash over whole photo */}
+              <div className="absolute inset-0 bg-black/15" />
             </div>
           ))}
         </div>
@@ -88,39 +89,24 @@ export default function HeroBanner() {
         {/* Content Container */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 py-12 md:py-20 flex justify-end">
           
-          {/* Floating Card */}
-          <div className="w-full lg:w-[540px] xl:w-[580px] bg-white/95 backdrop-blur-md rounded-sm shadow-[0_20px_50px_rgba(0,0,0,0.12)] p-7 sm:p-10 md:p-12 transition-all duration-500">
+          {/* Pure Floating Text - STRICTLY ZERO BOX SHAPE, NO BORDERS, NO CARDS */}
+          <div className="relative w-full lg:w-[560px] xl:w-[620px] transition-all duration-500">
             
+            {/* Seamless boundary-free soft ambient glow behind text only - zero edges or box lines */}
+            <div className="absolute -inset-8 bg-white/75 blur-3xl pointer-events-none -z-10 rounded-full" />
+
             {/* Main Headline */}
-            <h1 className="font-serif text-2xl sm:text-3xl md:text-[38px] xl:text-[42px] font-semibold text-[#48732c] leading-[1.25] tracking-tight">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-[44px] xl:text-[48px] font-semibold text-[#274413] leading-[1.2] tracking-tight drop-shadow-sm">
               {slide.title}
             </h1>
 
             {/* Subtext */}
-            <p className="text-gray-500 text-sm sm:text-[15.5px] leading-relaxed mt-4 sm:mt-5 font-normal">
+            <p className="text-[#1c2419] text-base sm:text-[17px] font-medium leading-relaxed mt-4 sm:mt-5 max-w-xl drop-shadow-sm">
               {slide.subtitle}
             </p>
 
-            {/* CTA Link with red dot */}
-            <div className="mt-7 sm:mt-8 flex flex-wrap items-center gap-4 sm:gap-6 pt-1">
-              <button
-                onClick={() => setProgramModalOpen(true)}
-                className="group inline-flex items-center text-gray-800 hover:text-[#48732c] font-medium text-sm sm:text-[15px] tracking-wide transition-colors duration-200"
-              >
-                <span>{slide.ctaText}</span>
-                <span className="w-2.5 h-2.5 rounded-full bg-[#d6453d] inline-block ml-3 transform group-hover:scale-125 transition-transform duration-200 shadow-sm shadow-[#d6453d]/40" />
-              </button>
-
-              <button
-                onClick={() => setAppointmentOpen(true)}
-                className="sm:hidden w-full text-center bg-[#1c221b] text-white py-2.5 rounded font-semibold text-xs tracking-wider uppercase mt-2"
-              >
-                Book An Appointment
-              </button>
-            </div>
-
             {/* Slide Navigation Dots */}
-            <div className="mt-8 sm:mt-10 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-400">
+            <div className="mt-8 sm:mt-10 flex items-center justify-between text-xs text-gray-700">
               <div className="flex items-center gap-2">
                 {slides.map((_, dotIdx) => (
                   <button
@@ -129,7 +115,7 @@ export default function HeroBanner() {
                     className={`transition-all duration-300 rounded-full ${
                       dotIdx === currentSlide
                         ? 'w-6 h-2 bg-[#5c8d37]'
-                        : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
+                        : 'w-2 h-2 bg-gray-500 hover:bg-gray-700'
                     }`}
                     aria-label={`Go to slide ${dotIdx + 1}`}
                   />
@@ -140,14 +126,14 @@ export default function HeroBanner() {
               <div className="flex items-center gap-1.5">
                 <button
                   onClick={handlePrev}
-                  className="p-1.5 rounded hover:bg-gray-100 text-gray-500 hover:text-gray-800 transition"
+                  className="p-1.5 rounded-full hover:bg-black/10 text-gray-700 hover:text-black transition"
                   aria-label="Previous slide"
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </button>
                 <button
                   onClick={handleNext}
-                  className="p-1.5 rounded hover:bg-gray-100 text-gray-500 hover:text-gray-800 transition"
+                  className="p-1.5 rounded-full hover:bg-black/10 text-gray-700 hover:text-black transition"
                   aria-label="Next slide"
                 >
                   <ChevronRight className="w-4 h-4" />
