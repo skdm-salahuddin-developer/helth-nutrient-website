@@ -29,10 +29,16 @@ export default function TopBar() {
         
         {/* Left Contact Details: Address, Email & Phone with genuine crisp vector icons */}
         <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-5 text-emerald-50 text-xs sm:text-[13px]">
-          <span className="hidden lg:inline-flex items-center gap-1.5 text-emerald-100">
+          <a
+            href="https://share.google/QFh9lhoDh7HEuCLu8"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="View clinic on Google Maps"
+            className="hidden lg:inline-flex items-center gap-1.5 text-emerald-100 hover:text-white transition-colors"
+          >
             <MapPin className="w-3.5 h-3.5 text-white/90 flex-shrink-0" />
             <span>Shop No.3087, 1st Fl, Rustomjee Eaze Zone Mall, Malad West, Mumbai</span>
-          </span>
+          </a>
 
           <a
             href="mailto:nutritionbydurdana@gmail.com"
@@ -54,7 +60,7 @@ export default function TopBar() {
         {/* Right Social Media Icons: Facebook, Instagram, WhatsApp ONLY */}
         <div className="flex items-center space-x-3.5 text-emerald-50">
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/people/Durdana-Ansari/pfbid02hCqS4ViRSUBuGEm1GJ1hQfYEMboUViLhHNfXeZaqgyxRGa9KAcKbsXj7E7g8a8TKl/?rdid=xQwmhMSpgewm2S6g&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16etLftAcn%2F"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
@@ -64,7 +70,7 @@ export default function TopBar() {
           </a>
 
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/nutritionbydurdana?igsh=MW52Z29jdXUxZmlxZg%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"

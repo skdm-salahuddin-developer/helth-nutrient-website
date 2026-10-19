@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Phone, Mail, Calendar, ArrowUp } from 'lucide-react';
+import { Phone, Mail, Calendar, ArrowUp, MapPin, ExternalLink, Leaf } from 'lucide-react';
 import AppointmentModal from './AppointmentModal';
 
 // Social Icons with authentic brand colors (no borders)
@@ -25,11 +25,13 @@ const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 );
 
 const clinicLocation = {
-  name: 'Durdana',
-  role: 'Clinical Nutritionist & Health Advisor',
+  name: 'Nutrition By Durdana',
+  role: 'Best Nutritionist & Weight Loss Coach in Malad',
+  clinicTag: 'One of the Best Nutrition Clinics in Malad',
   address: 'Shop No.3087, 1st floor, Rustomjee Eaze Zone Mall, Sunder Nagar, Malad West, Mumbai, Maharashtra 400064',
   phone: '+91 96199 97901',
   email: 'nutritionbydurdana@gmail.com',
+  gmbUrl: 'https://share.google/QFh9lhoDh7HEuCLu8',
   mapUrl: 'https://maps.google.com/maps?q=Nutrition%20By%20Durdana%2C%20Malad%20West%2C%20Mumbai&t=&z=16&ie=UTF8&iwloc=B&output=embed',
 };
 
@@ -42,30 +44,59 @@ export default function Footer() {
 
   return (
     <>
-      <footer id="contact" className="bg-[#5c8d37] pt-12 sm:pt-16 pb-6 relative text-white scroll-mt-20">
+      <footer id="nutritionist-near-malad" className="bg-[#5c8d37] pt-12 sm:pt-16 pb-6 relative text-white scroll-mt-20">
+        {/* Backward-compatible anchor for #contact */}
+        <span id="contact" className="block relative -top-24 invisible" />
         <div className="max-w-6xl mx-auto px-4 sm:px-8">
           
+          {/* Target Keyword Showcase with Leaf */}
+          <div className="text-center mb-6">
+            <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold uppercase tracking-[0.22em] text-white">
+              <Leaf className="w-4 h-4 text-white" />
+              <span>nutritionist near Malad</span>
+            </div>
+          </div>
+
           {/* Main Floating White Contact & Location Card */}
           <div className="bg-white rounded-[3px] shadow-2xl p-6 sm:p-10 lg:p-12 mb-12 text-gray-800">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
               
-              {/* Left Column: Embedded Styled Map */}
-              <div className="lg:col-span-7 h-[280px] sm:h-[340px] w-full rounded-[2px] overflow-hidden border border-gray-200 relative bg-gray-50 shadow-inner">
-                <iframe
-                  title="Durdana - Clinical Nutritionist Location Map in Malad West, Mumbai"
-                  src={clinicLocation.mapUrl}
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-full"
-                />
+              {/* Left Column: Embedded Styled Map with Quick Directions bar */}
+              <div className="lg:col-span-7 flex flex-col">
+                <div className="h-[280px] sm:h-[340px] w-full rounded-[2px] overflow-hidden border border-gray-200 relative bg-gray-50 shadow-inner">
+                  <iframe
+                    title="Nutrition By Durdana - Best Nutritionist in Malad West Location Map"
+                    src={clinicLocation.mapUrl}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-full"
+                  />
+                </div>
+                
+                {/* Under-map direct GMB directions anchor */}
+                <div className="mt-2.5 flex flex-wrap items-center justify-between text-xs text-gray-500 px-1 gap-2">
+                  <span className="flex items-center gap-1.5 text-gray-600">
+                    <MapPin className="w-3.5 h-3.5 text-[#5c8d37] flex-shrink-0" />
+                    <span>Serving Malad, Goregaon, Kandivali & across Mumbai</span>
+                  </span>
+                  <a
+                    href={clinicLocation.gmbUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#48732c] hover:underline font-semibold flex items-center gap-1"
+                  >
+                    <span>Get Directions</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
               </div>
 
-              {/* Right Column: Single Location Details (No Dropdown) */}
-              <div className="lg:col-span-5 flex flex-col justify-between space-y-5">
+              {/* Right Column: Single Location Details with GMB Badge */}
+              <div className="lg:col-span-5 flex flex-col justify-between space-y-4 sm:space-y-5">
                 
                 {/* Location Title & Address */}
                 <div>
@@ -75,7 +106,7 @@ export default function Footer() {
                   <p className="text-xs text-[#5c8d37] font-semibold tracking-wide uppercase mt-1">
                     {clinicLocation.role}
                   </p>
-                  <p className="text-xs sm:text-[13px] text-gray-500 mt-2 font-normal leading-relaxed">
+                  <p className="text-xs sm:text-[13px] text-gray-600 mt-2 font-normal leading-relaxed">
                     {clinicLocation.address}
                   </p>
                 </div>
@@ -84,7 +115,7 @@ export default function Footer() {
                 <div className="w-full h-[1px] bg-gray-200" />
 
                 {/* Contact Items */}
-                <div className="space-y-3.5 text-xs sm:text-[13.5px] text-gray-600">
+                <div className="space-y-3 text-xs sm:text-[13.5px] text-gray-600">
                   <div className="flex items-center gap-3">
                     <Phone className="w-4 h-4 text-[#5c8d37] flex-shrink-0" />
                     <a href={`tel:${clinicLocation.phone.replace(/[^0-9+]/g, '')}`} className="hover:text-[#5c8d37] font-medium transition-colors">
@@ -101,9 +132,9 @@ export default function Footer() {
                 </div>
 
                 {/* Social Icons: Facebook, Instagram, WhatsApp with brand colors and no borders */}
-                <div className="flex items-center gap-4 pt-1">
+                <div className="flex items-center gap-4 pt-0.5">
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/people/Durdana-Ansari/pfbid02hCqS4ViRSUBuGEm1GJ1hQfYEMboUViLhHNfXeZaqgyxRGa9KAcKbsXj7E7g8a8TKl/?rdid=xQwmhMSpgewm2S6g&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16etLftAcn%2F"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook"
@@ -113,7 +144,7 @@ export default function Footer() {
                   </a>
 
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/nutritionbydurdana?igsh=MW52Z29jdXUxZmlxZg%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
@@ -133,15 +164,26 @@ export default function Footer() {
                   </a>
                 </div>
 
-                {/* Book Now Button */}
-                <div className="pt-2">
+                {/* Action Buttons: Book Consultation + Google Maps Directions */}
+                <div className="pt-2 space-y-2">
                   <button
                     onClick={() => setAppointmentOpen(true)}
                     className="w-full bg-[#1c221b] hover:bg-[#5c8d37] text-white py-3 px-6 rounded-[3px] font-semibold text-xs sm:text-sm tracking-wider uppercase flex items-center justify-center gap-2.5 transition-colors duration-300 shadow-sm hover:shadow-md cursor-pointer"
                   >
                     <Calendar className="w-4 h-4" />
-                    <span>Book Now</span>
+                    <span>Book In-Clinic / Online Consultation</span>
                   </button>
+
+                  <a
+                    href={clinicLocation.gmbUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-[#f4f7f2] hover:bg-[#eaf1e5] text-[#33531b] border border-[#a2c782]/70 py-2.5 px-4 rounded-[3px] font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 transition-colors duration-200 shadow-sm"
+                  >
+                    <MapPin className="w-4 h-4 text-[#5c8d37]" />
+                    <span>View on Google Maps / Get Directions</span>
+                    <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+                  </a>
                 </div>
 
               </div>
@@ -174,9 +216,9 @@ export default function Footer() {
 
             {/* Quick Links & Back to Top */}
             <div className="flex items-center gap-5">
-              <a href="#about" className="hover:text-white transition-colors">About</a>
-              <a href="#services" className="hover:text-white transition-colors">Services</a>
-              <a href="#why-us" className="hover:text-white transition-colors">Why Us</a>
+              <a href="#nutritionist-in-malad" className="hover:text-white transition-colors">About</a>
+              <a href="#custom-diet-plans-in-malad-for-weight-loss" className="hover:text-white transition-colors">Services</a>
+              <a href="#best-nutrition-clinics-in-malad" className="hover:text-white transition-colors">Why Us</a>
               <button
                 onClick={scrollToTop}
                 className="w-8 h-8 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#5c8d37] flex items-center justify-center transition-all duration-200"

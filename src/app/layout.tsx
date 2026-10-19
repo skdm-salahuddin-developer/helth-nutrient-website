@@ -17,14 +17,20 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://dtdurdana.in'),
   title: {
-    default: 'Clinical Nutritionist & Dietitian in Malad West, Mumbai | Nutrition By Durdana',
+    default: 'Best Nutritionist & Weight Loss Coach in Malad | Nutrition By Durdana',
     template: '%s | Nutrition By Durdana',
   },
   description:
-    'Consult Dt. Durdana, certified Clinical Nutritionist in Malad West, Mumbai. Holistic Ayurveda & Medical Nutrition for PCOS, gut health, diabetes, and sustainable weight management. Book your consultation today!',
+    'Consult Dt. Durdana, certified best nutritionist and weight loss coach in Malad West, Mumbai. Offering custom diet plans in Malad for weight loss, PCOS, gut healing, and lifestyle transformation at one of the best nutrition clinics in Malad.',
   keywords: [
-    'Clinical Nutritionist Mumbai',
+    'Nutritionist in Malad',
+    'Best Nutritionist in Malad',
+    'Weight Loss Coach in Malad',
+    'custom diet plans in Malad for weight loss',
+    'best nutrition clinics in Malad',
+    'nutritionist near Malad',
     'Dietitian in Malad West',
+    'Clinical Nutritionist Mumbai',
     'Best Nutritionist Malad West Mumbai',
     'Nutritionist near me Malad',
     'PCOS Dietitian Mumbai',
@@ -47,9 +53,9 @@ export const metadata: Metadata = {
     canonical: 'https://dtdurdana.in',
   },
   openGraph: {
-    title: 'Clinical Nutritionist & Dietitian in Malad West, Mumbai | Nutrition By Durdana',
+    title: 'Best Nutritionist & Weight Loss Coach in Malad | Nutrition By Durdana',
     description:
-      'Attain long-term health and wellness via individualized, holistic nutrition rooted in Ayurveda Food Science and modern Medical Nutrition in Malad West, Mumbai.',
+      'Looking for the best nutritionist in Malad? Consult Dt. Durdana for custom diet plans in Malad for weight loss, PCOS management, and gut health at our top-rated Malad clinic.',
     url: 'https://dtdurdana.in',
     siteName: 'Nutrition By Durdana',
     locale: 'en_IN',
@@ -59,15 +65,15 @@ export const metadata: Metadata = {
         url: '/about1.webp',
         width: 800,
         height: 1000,
-        alt: 'Dt. Durdana - Clinical Nutritionist & Holistic Health Advisor in Malad West, Mumbai',
+        alt: 'Dt. Durdana - Best Nutritionist & Weight Loss Coach in Malad West, Mumbai',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Clinical Nutritionist & Dietitian in Malad West, Mumbai | Nutrition By Durdana',
+    title: 'Best Nutritionist & Weight Loss Coach in Malad | Nutrition By Durdana',
     description:
-      'Holistic clinical nutrition for PCOS, gut health, diabetes, and weight management in Malad West, Mumbai.',
+      'Custom diet plans in Malad for weight loss, PCOS, and gut health by certified Clinical Nutritionist Dt. Durdana.',
     images: ['/about1.webp'],
   },
   robots: {
@@ -89,13 +95,13 @@ const jsonLd = {
     {
       '@type': ['LocalBusiness', 'MedicalBusiness', 'HealthAndBeautyBusiness'],
       '@id': 'https://dtdurdana.in/#organization',
-      name: 'Nutrition By Durdana',
+      name: 'Nutrition By Durdana - Best Nutritionist in Malad',
       legalName: 'Nutrition By Durdana',
       url: 'https://dtdurdana.in',
       logo: 'https://dtdurdana.in/about1.webp',
       image: 'https://dtdurdana.in/about1.webp',
       description:
-        'Certified Clinical Nutritionist and Holistic Health Advisor in Malad West, Mumbai. Specializing in customized meal plans, Ayurveda food science, PCOS, gut healing, and lifestyle habit transformation.',
+        'Certified Best Nutritionist, Weight Loss Coach and leading nutrition clinic in Malad West, Mumbai. Offering custom diet plans in Malad for weight loss, Ayurveda food science, PCOS, gut healing, and sustainable habit coaching.',
       telephone: '+919619997901',
       email: 'nutritionbydurdana@gmail.com',
       priceRange: '₹₹',
@@ -121,11 +127,11 @@ const jsonLd = {
         },
       ],
       sameAs: [
-        'https://instagram.com',
-        'https://facebook.com',
+        'https://share.google/QFh9lhoDh7HEuCLu8',
+        'https://www.instagram.com/nutritionbydurdana?igsh=MW52Z29jdXUxZmlxZg%3D%3D',
+        'https://www.facebook.com/people/Durdana-Ansari/pfbid02hCqS4ViRSUBuGEm1GJ1hQfYEMboUViLhHNfXeZaqgyxRGa9KAcKbsXj7E7g8a8TKl/?rdid=xQwmhMSpgewm2S6g&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16etLftAcn%2F',
       ],
-      hasMap:
-        'https://maps.google.com/maps?q=Nutrition%20By%20Durdana%2C%20Malad%20West%2C%20Mumbai',
+      hasMap: 'https://share.google/QFh9lhoDh7HEuCLu8',
       aggregateRating: {
         '@type': 'AggregateRating',
         ratingValue: '4.9',
@@ -138,13 +144,13 @@ const jsonLd = {
       '@type': 'Person',
       '@id': 'https://dtdurdana.in/#person',
       name: 'Dt. Durdana',
-      jobTitle: 'Clinical Nutritionist & Health Advisor',
+      jobTitle: 'Best Nutritionist & Weight Loss Coach in Malad',
       worksFor: {
         '@id': 'https://dtdurdana.in/#organization',
       },
       image: 'https://dtdurdana.in/about1.webp',
       description:
-        'Certified Clinical Nutritionist and Health Consultant in Malad West, Mumbai.',
+        'Certified Clinical Nutritionist, Weight Loss Coach and Health Consultant in Malad West, Mumbai providing custom diet plans for weight loss.',
     },
   ],
 };

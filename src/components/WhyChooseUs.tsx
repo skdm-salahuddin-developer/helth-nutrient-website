@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Sparkles, ArrowRight, Check, ShieldCheck, HeartPulse, MessageCircle } from 'lucide-react';
+import { Sparkles, ArrowRight, Check, ShieldCheck, HeartPulse, MessageCircle, Leaf } from 'lucide-react';
 import AppointmentModal from './AppointmentModal';
 
 // Lotus Yoga Silhouette SVG matching the screenshot
@@ -60,7 +60,9 @@ export default function WhyChooseUs() {
 
   return (
     <>
-      <section id="why-us" className="py-16 md:py-24 bg-white relative scroll-mt-20">
+      <section id="best-nutrition-clinics-in-malad" className="py-16 md:py-24 bg-white relative scroll-mt-20">
+        {/* Backward-compatible anchor for #why-us */}
+        <span id="why-us" className="block relative -top-24 invisible" />
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           
           {/* Top Row: Left Green Card with Yoga Silhouette & Right Why Choose Us Content */}
@@ -94,6 +96,12 @@ export default function WhyChooseUs() {
 
             {/* Right Box: Why Choose Us Content & CTAs */}
             <div className="lg:col-span-7 flex flex-col justify-center">
+              {/* Target Keyword Showcase with Leaf */}
+              <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#5c8d37] mb-2.5">
+                <Leaf className="w-4 h-4 text-[#5c8d37]" />
+                <span>best nutrition clinics in Malad</span>
+              </div>
+
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-[44px] font-semibold text-[#1e231e] leading-[1.2] tracking-tight">
                 Why People need a <br />
                 <span className="text-[#5c8d37]">Health Adviser</span>
@@ -114,11 +122,11 @@ export default function WhyChooseUs() {
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#5c8d37]" />
-                  <span>Sustainable Weight Management</span>
+                  <span>Custom Diet Plans for Weight Loss</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#5c8d37]" />
-                  <span>Continuous 1-on-1 Accountability</span>
+                  <span>Top-Rated Clinic in Malad West</span>
                 </div>
               </div>
 
@@ -135,7 +143,7 @@ export default function WhyChooseUs() {
                 </a>
 
                 <a
-                  href="#contact"
+                  href="#nutritionist-near-malad"
                   className="inline-flex items-center gap-2 bg-[#1c221b] hover:bg-[#5c8d37] text-white px-6 py-3 rounded-[3px] text-sm font-semibold tracking-wide transition-all duration-300 shadow-sm hover:shadow-md active:scale-95"
                 >
                   <span>Contact Clinic</span>

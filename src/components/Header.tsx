@@ -11,33 +11,53 @@ export default function Header() {
   const [appointmentOpen, setAppointmentOpen] = useState(false);
   const [activeNav, setActiveNav] = useState('Home');
 
-  // Aligned according to the exact sequence of page sections
+  // Aligned according to the exact sequence of page sections with keyword slugs
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Why Us', href: '#why-us' },
-    { name: 'Services', href: '#services' },
-    { name: 'FAQ', href: '#faq' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '#best-nutritionist-in-malad' },
+    { name: 'About', href: '#nutritionist-in-malad' },
+    { name: 'Why Us', href: '#best-nutrition-clinics-in-malad' },
+    { name: 'Services', href: '#custom-diet-plans-in-malad-for-weight-loss' },
+    { name: 'FAQ', href: '#weight-loss-coach-in-malad' },
+    { name: 'Contact', href: '#nutritionist-near-malad' },
   ];
 
-  // Active section scroll spy
+  // Active section scroll spy and URL slug sync
   useEffect(() => {
+    let isClickScrolling = false;
+    let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
+
+    const syncSlug = (hash: string) => {
+      if (typeof window !== 'undefined' && window.location.hash !== hash) {
+        window.history.replaceState(null, '', hash);
+      }
+    };
+
     const handleScroll = () => {
+      if (isClickScrolling) return;
+
       // Bottom of page detection for Contact
       if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 70) {
         setActiveNav('Contact');
+        syncSlug('#nutritionist-near-malad');
         return;
       }
 
       // Top of page
       if (window.scrollY < 180) {
         setActiveNav('Home');
+        syncSlug('#best-nutritionist-in-malad');
         return;
       }
 
-      const scrollPosition = window.scrollY + 120;
-      const sectionIds = ['contact', 'faq', 'services', 'why-us', 'about', 'home'];
+      const scrollPosition = window.scrollY + 140;
+      const sectionIds = [
+        'nutritionist-near-malad',
+        'weight-loss-coach-in-malad',
+        'custom-diet-plans-in-malad-for-weight-loss',
+        'best-nutrition-clinics-in-malad',
+        'nutritionist-in-malad',
+        'best-nutritionist-in-malad',
+      ];
 
       for (const id of sectionIds) {
         const el = document.getElementById(id);
@@ -47,6 +67,7 @@ export default function Header() {
             const matched = navLinks.find((link) => link.href === `#${id}`);
             if (matched) {
               setActiveNav(matched.name);
+              syncSlug(`#${id}`);
               break;
             }
           }
@@ -54,15 +75,44 @@ export default function Header() {
       }
     };
 
+    // Check if user loaded the page with a hash in URL (e.g. /#custom-diet-plans-in-malad-for-weight-loss or /#services)
+    if (typeof window !== 'undefined' && window.location.hash) {
+      const initialHash = window.location.hash;
+      const id = initialHash.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        setTimeout(() => {
+          const headerOffset = 80;
+          const elementPosition = el.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth',
+          });
+          const matched = navLinks.find((link) => link.href === initialHash || link.href.includes(id));
+          if (matched) setActiveNav(matched.name);
+        }, 200);
+      }
+    }
+
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (scrollTimeout) clearTimeout(scrollTimeout);
+    };
   }, []);
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string, name: string) => {
     e.preventDefault();
     setActiveNav(name);
-    if (href === '#home') {
+    
+    // Update URL slug immediately with keyword slug
+    if (typeof window !== 'undefined') {
+      window.history.replaceState(null, '', href);
+    }
+
+    if (href === '#best-nutritionist-in-malad' || href === '#home') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }

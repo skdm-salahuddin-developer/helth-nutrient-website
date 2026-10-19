@@ -1,45 +1,45 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Plus, Minus, HelpCircle, MessageCircle } from 'lucide-react';
+import { Plus, Minus, MessageCircle, Leaf } from 'lucide-react';
 import AppointmentModal from './AppointmentModal';
 
 const faqs = [
   {
     id: 1,
-    question: 'How does Nutrition By Durdana differ from generic diet plans?',
+    question: 'How do custom diet plans in Malad for weight loss work?',
     answer:
-      'Unlike restrictive fad diets or generic meal templates, our approach integrates ancient Ayurveda Food Science with modern clinical Medical Nutrition. We analyze your unique bio-individuality, metabolic rhythm, health history, and daily lifestyle to craft sustainable habits that heal from within.',
+      'Our custom diet plans in Malad for weight loss are 100% personalized to your unique metabolic pace, daily lifestyle, and food preferences. Rather than restrictive calorie cutting, Dt. Durdana combines clinical medical nutrition with Ayurvedic metabolic balancing to help you shed fat permanently while preserving muscle and energy.',
   },
   {
     id: 2,
-    question: 'Can you help manage specific medical conditions (PCOS, Diabetes, Gut Issues)?',
+    question: 'How does Nutrition By Durdana differ from generic diet clinics?',
     answer:
-      'Yes, absolutely. We specialize in clinical nutrition therapy for gut health (IBS, bloating, acid reflux), hormonal balance (PCOS, thyroid), metabolic health (Type 2 diabetes, insulin resistance, cholesterol), and chronic inflammation through personalized anti-inflammatory dietary strategies.',
+      'Unlike restrictive fad diets or generic templates, Nutrition By Durdana ranks among the best nutrition clinics in Malad because we address the root causes of weight gain, gut disorders, and hormonal imbalances. We craft sustainable habits that heal your metabolism from within.',
   },
   {
     id: 3,
+    question: 'Can you help manage specific medical conditions (PCOS, Diabetes, Gut Issues)?',
+    answer:
+      'Yes, absolutely. As a certified Clinical Nutritionist and Weight Loss Coach in Malad, Dt. Durdana specializes in medical nutrition therapy for gut health (IBS, acid reflux), PCOS, thyroid, insulin resistance, cholesterol, and chronic inflammation.',
+  },
+  {
+    id: 4,
     question: 'What is included in the 90-Day Practice Transformation program?',
     answer:
       'The 90-day program includes a comprehensive initial metabolic assessment, personalized weekly meal blueprints, grocery guides, mindful eating rituals, intuitive movement guidelines, and dedicated 1-on-1 weekly consultations with continuous WhatsApp/email accountability.',
   },
   {
-    id: 4,
+    id: 5,
     question: 'Will I have to eliminate all my favorite foods?',
     answer:
       'No! True wellness is sustainable and enjoyable. We believe in addition over deprivation. Our goal is to introduce nutrient-dense, gut-loving foods and mindful cooking techniques while helping you enjoy social dining and treats without guilt or metabolic crashes.',
   },
   {
-    id: 5,
-    question: 'How do I get started with an initial consultation?',
-    answer:
-      'You can easily book an appointment by clicking the "Book An Appointment" button on this page. We will schedule a 1-on-1 discovery session to review your health history, current habits, and craft your step-by-step roadmap.',
-  },
-  {
     id: 6,
-    question: 'Where is your clinic located, and do you offer online nutrition consultations?',
+    question: 'Where is your clinic located, and can I visit from Malad or nearby areas?',
     answer:
-      'Our physical clinic is located at Shop No.3087, 1st floor, Rustomjee Eaze Zone Mall, Malad West, Mumbai. In addition to in-person consultations, we provide seamless online consultation programs for clients across Mumbai, India, and globally via video call and WhatsApp.',
+      'Our physical clinic is located at Shop No.3087, 1st floor, Rustomjee Eaze Zone Mall, Sunder Nagar, Malad West, Mumbai — easily reachable for residents searching for a top nutritionist near Malad, Goregaon, and Kandivali. You can view our verified Google Business Profile and get 1-click driving directions right from the map below.',
   },
 ];
 
@@ -53,7 +53,9 @@ export default function FAQSection() {
 
   return (
     <>
-      <section id="faq" className="py-16 md:py-24 bg-[#fbfdf9] relative overflow-hidden scroll-mt-20">
+      <section id="weight-loss-coach-in-malad" className="py-16 md:py-24 bg-[#fbfdf9] relative overflow-hidden scroll-mt-20">
+        {/* Backward-compatible anchor for #faq */}
+        <span id="faq" className="block relative -top-24 invisible" />
         {/* Decorative background glow */}
         <div className="absolute top-1/2 -left-20 w-80 h-80 bg-[#5c8d37]/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute top-1/4 -right-20 w-80 h-80 bg-[#5c8d37]/5 rounded-full blur-3xl pointer-events-none" />
@@ -62,9 +64,10 @@ export default function FAQSection() {
           
           {/* Section Header */}
           <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+            {/* Target Keyword Showcase with Leaf */}
             <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#5c8d37] mb-2.5">
-              <HelpCircle className="w-4 h-4 text-[#5c8d37]" />
-              <span>Got Questions?</span>
+              <Leaf className="w-4 h-4 text-[#5c8d37]" />
+              <span>Weight Loss Coach in Malad</span>
             </div>
             
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#1e231e] tracking-tight leading-[1.25]">

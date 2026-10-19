@@ -95,7 +95,9 @@ export default function ServicesCarousel() {
 
   return (
     <>
-      <section id="services" className="py-16 md:py-24 bg-[#fafbfa] relative overflow-hidden scroll-mt-20">
+      <section id="custom-diet-plans-in-malad-for-weight-loss" className="py-16 md:py-24 bg-[#fafbfa] relative overflow-hidden scroll-mt-20">
+        {/* Backward-compatible anchor for #services */}
+        <span id="services" className="block relative -top-24 invisible" />
         {/* Subtle decorative background blur */}
         <div className="absolute top-1/4 -left-20 w-80 h-80 bg-[#5c8d37]/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-10 -right-20 w-96 h-96 bg-[#5c8d37]/5 rounded-full blur-3xl pointer-events-none" />
@@ -104,9 +106,10 @@ export default function ServicesCarousel() {
           
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+            {/* Target Keyword Showcase with Leaf */}
             <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-[#5c8d37] mb-2.5">
               <Leaf className="w-4 h-4 text-[#5c8d37]" />
-              <span>Specialized Services</span>
+              <span>custom diet plans in Malad for weight loss</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#1e231e] tracking-tight leading-[1.25]">
               Personalized Programs For <br className="hidden sm:inline" />
@@ -256,7 +259,7 @@ export default function ServicesCarousel() {
                 </a>
 
                 <a
-                  href="#contact"
+                  href="#nutritionist-near-malad"
                   onClick={() => setSelectedService(null)}
                   className="bg-[#1c221b] hover:bg-[#5c8d37] text-white py-2.5 px-4 rounded text-center font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition"
                 >

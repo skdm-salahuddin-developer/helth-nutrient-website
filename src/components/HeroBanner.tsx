@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Check, Leaf } from 'lucide-react';
 import AppointmentModal from './AppointmentModal';
 
 const slides = [
@@ -10,7 +10,7 @@ const slides = [
     id: 1,
     title: 'Mindful Daily Habits For Lasting Vitality',
     subtitle:
-      'Reclaim your natural energy with sustainable routines. Small daily shifts that compound into lifelong vitality, hormonal balance, and confidence.',
+      'Reclaim your natural energy with sustainable routines. Custom diet plans in Malad for weight loss, hormonal balance, and lifelong confidence.',
     ctaText: 'Explore Mindful Living',
     image: '/images/hero-slide-3.jpg',
     imageAlt: 'Mindful Daily Habits For Lasting Vitality - Nutrition By Durdana Mumbai',
@@ -19,19 +19,19 @@ const slides = [
     id: 2,
     title: 'Nourish Your Body With Clean & Balanced Meals',
     subtitle:
-      'Personalized nutrition guidance crafted for your lifestyle. Build intuitive wellness habits with certified nutritionists in Mumbai by your side.',
+      'Personalized nutrition guidance crafted for your lifestyle. Build intuitive wellness habits with top-rated nutritionists in Malad by your side.',
     ctaText: 'Discover Nutrition Plans',
     image: '/images/hero-slide-2.jpg',
-    imageAlt: 'Balanced meals and holistic clinical nutrition by Dt. Durdana',
+    imageAlt: 'Custom diet plans for weight loss in Malad - Dt. Durdana',
   },
   {
     id: 3,
     title: 'You Can Transform Health Through Habit Change!',
     subtitle:
-      'Consult Dt. Durdana, Clinical Nutritionist in Malad West, Mumbai. Personalized dietary programs rooted in Ayurveda and medical science to heal your body naturally.',
+      'Consult Dt. Durdana, the best nutritionist & weight loss coach in Malad. Personalized dietary programs rooted in Ayurveda and medical science to heal your body naturally.',
     ctaText: 'Learn More About Our Program',
     image: '/images/hero-slide-1.jpg',
-    imageAlt: 'Clinical nutrition and personalized diet planning - Nutrition By Durdana Mumbai',
+    imageAlt: 'Best Nutritionist in Malad - Nutrition By Durdana Clinic',
   },
 ];
 
@@ -61,7 +61,9 @@ export default function HeroBanner() {
 
   return (
     <>
-      <section id="home" className="relative w-full min-h-[580px] lg:min-h-[660px] xl:min-h-[720px] overflow-hidden flex items-center bg-[#f8f9f6] scroll-mt-20">
+      <section id="best-nutritionist-in-malad" className="relative w-full min-h-[580px] lg:min-h-[660px] xl:min-h-[720px] overflow-hidden flex items-center bg-[#f8f9f6] scroll-mt-20">
+        {/* Backward-compatible anchor for #home */}
+        <span id="home" className="block relative -top-24 invisible" />
         {/* Background Images - Clean, without any text overlays on the image */}
         <div className="absolute inset-0 z-0">
           {slides.map((s, idx) => (
@@ -94,6 +96,12 @@ export default function HeroBanner() {
             
             {/* Seamless boundary-free soft ambient glow behind text only - zero edges or box lines */}
             <div className="absolute -inset-8 bg-white/75 blur-3xl pointer-events-none -z-10 rounded-full" />
+
+            {/* Target Keyword Showcase with Leaf */}
+            <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-wider text-[#34581c] uppercase mb-2">
+              <Leaf className="w-4 h-4 text-[#5c8d37]" />
+              <span>Best Nutritionist in Malad</span>
+            </div>
 
             {/* Main Headline */}
             <h1 className="font-serif text-3xl sm:text-4xl md:text-[44px] xl:text-[48px] font-semibold text-[#274413] leading-[1.2] tracking-tight drop-shadow-sm">

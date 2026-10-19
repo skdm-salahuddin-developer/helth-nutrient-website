@@ -94,7 +94,7 @@ export default function Transformation90Days() {
                   <span>Start 90-Day on WhatsApp</span>
                 </a>
                 <a
-                  href="#contact"
+                  href="#nutritionist-near-malad"
                   className="inline-flex items-center gap-2 bg-[#1c221b] hover:bg-[#5c8d37] text-white px-6 py-3 rounded-[3px] text-sm font-semibold tracking-wide transition-all duration-300 shadow-sm hover:shadow-md active:scale-95"
                 >
                   <span>Contact Clinic</span>

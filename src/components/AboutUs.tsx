@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { CheckCircle, Leaf, ArrowRight, MessageCircle } from 'lucide-react';
+import { CheckCircle, ArrowRight, MessageCircle, Leaf } from 'lucide-react';
 import AppointmentModal from './AppointmentModal';
 
 export default function AboutUs() {
@@ -26,7 +26,9 @@ export default function AboutUs() {
 
   return (
     <>
-      <section id="about" className="py-16 md:py-24 bg-white relative overflow-hidden scroll-mt-20">
+      <section id="nutritionist-in-malad" className="py-16 md:py-24 bg-white relative overflow-hidden scroll-mt-20">
+        {/* Backward-compatible anchor for #about */}
+        <span id="about" className="block relative -top-24 invisible" />
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             
@@ -48,10 +50,10 @@ export default function AboutUs() {
             {/* Right Text & Philosophy Column */}
             <div className="lg:col-span-7 flex flex-col justify-center">
               
-              {/* Section Subtitle */}
+              {/* Target Keyword Showcase with Leaf */}
               <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#5c8d37] mb-2.5">
                 <Leaf className="w-4 h-4 text-[#5c8d37]" />
-                <span>About Us</span>
+                <span>Nutritionist in Malad</span>
               </div>
 
               {/* Main Headline */}
@@ -61,16 +63,16 @@ export default function AboutUs() {
 
               {/* Tagline / Subtitle */}
               <p className="font-serif italic text-base sm:text-lg text-[#5c8d37] mt-3 font-medium">
-                “Attain long-term health and wellness via individualized, holistic nutrition.”
+                “Attain sustainable weight loss and lifelong vitality with custom diet plans rooted in clinical nutrition & Ayurveda.”
               </p>
 
               {/* Main Body Paragraph */}
               <div className="space-y-3 mt-4 text-gray-600 text-sm sm:text-[15px] leading-relaxed">
                 <p>
-                  Your trusted partner in achieving long-term health, healing, and wellness through personalised nutrition. Whether you want to improve your lifestyle, manage a medical condition, or simply build healthier habits, you’re in the right place.
+                  As one of the trusted <strong className="text-gray-800 font-semibold">nutrition clinics in Malad</strong>, Nutrition By Durdana is your destination for permanent health transformation. Whether you are seeking the <strong className="text-gray-800 font-semibold">best nutritionist in Malad</strong> or a dedicated <strong className="text-gray-800 font-semibold">weight loss coach in Malad</strong>, we are here to support your journey.
                 </p>
                 <p>
-                  With expert guidance rooted in <strong className="text-gray-800 font-semibold">Ayurveda Food Science</strong> and modern <strong className="text-gray-800 font-semibold">Medical Nutrition</strong>, I help individuals transform their health with plans that are simple, sustainable, and tailored to their unique needs.
+                  Specializing in <strong className="text-gray-800 font-semibold">custom diet plans in Malad for weight loss</strong>, gut restoration, PCOS, and lifestyle disorders, Dt. Durdana bridges ancient <strong className="text-gray-800 font-semibold">Ayurveda Food Science</strong> with modern <strong className="text-gray-800 font-semibold">Medical Nutrition</strong> to deliver results that are enjoyable, realistic, and lifelong.
                 </p>
               </div>
 
@@ -105,7 +107,7 @@ export default function AboutUs() {
                   <span>Start Plan on WhatsApp</span>
                 </a>
                 <a
-                  href="#contact"
+                  href="#nutritionist-near-malad"
                   className="inline-flex items-center gap-2 bg-[#1c221b] hover:bg-[#5c8d37] text-white px-6 py-3 rounded-[3px] text-sm font-semibold tracking-wide transition-all duration-300 shadow-sm hover:shadow-md active:scale-95"
                 >
                   <span>Contact Clinic</span>
