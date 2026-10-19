@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Plus, Minus, MessageCircle, Leaf } from 'lucide-react';
-import AppointmentModal from './AppointmentModal';
+import { Plus, Minus, Leaf } from 'lucide-react';
 
 const faqs = [
   {
@@ -45,7 +44,6 @@ const faqs = [
 
 export default function FAQSection() {
   const [openId, setOpenId] = useState<number | null>(1);
-  const [appointmentOpen, setAppointmentOpen] = useState(false);
 
   const toggleFAQ = (id: number) => {
     setOpenId(openId === id ? null : id);
@@ -127,38 +125,8 @@ export default function FAQSection() {
             })}
           </div>
 
-          {/* Bottom Help Callout */}
-          <div className="mt-12 text-center bg-white p-6 sm:p-8 rounded border border-gray-200/80 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3.5 text-left">
-              <div className="w-12 h-12 rounded-full bg-themeGreen-50 text-[#5c8d37] flex items-center justify-center flex-shrink-0">
-                <MessageCircle className="w-6 h-6" />
-              </div>
-              <div>
-                <h4 className="font-serif text-base sm:text-lg font-semibold text-gray-900">
-                  Have a specific question not listed here?
-                </h4>
-                <p className="text-xs text-gray-500">
-                  Speak directly with Durdana during a discovery call.
-                </p>
-              </div>
-            </div>
-
-            <button
-              onClick={() => setAppointmentOpen(true)}
-              className="bg-[#1c221b] hover:bg-[#5c8d37] text-white px-6 py-2.5 rounded-[3px] font-semibold text-xs tracking-wider uppercase transition-colors whitespace-nowrap"
-            >
-              Ask a Question
-            </button>
-          </div>
-
         </div>
       </section>
-
-      {/* Appointment Modal */}
-      <AppointmentModal 
-        isOpen={appointmentOpen} 
-        onClose={() => setAppointmentOpen(false)} 
-      />
     </>
   );
 }

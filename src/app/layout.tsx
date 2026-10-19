@@ -134,8 +134,8 @@ const jsonLd = {
       hasMap: 'https://share.google/QFh9lhoDh7HEuCLu8',
       aggregateRating: {
         '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '128',
+        ratingValue: '5.0',
+        reviewCount: '20',
         bestRating: '5',
         worstRating: '1',
       },
